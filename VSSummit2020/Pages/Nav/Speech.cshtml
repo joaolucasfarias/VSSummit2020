@@ -1,0 +1,29 @@
+﻿@page
+@model VSSummit2020.Pages.Nav.SpeechModel
+@{
+}
+
+<form method="post">
+    @if (Model.Choose)
+    {
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="traduzirDe">Traduzir de:</label>
+                    <select class="form-control" name="language" id="traduzirDe" required>
+                        <option value="pt-br">Português (Brasil)</option>
+                        <option value="en-us">Inglês</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    }
+
+    <br />
+    <br />
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ouvir</button>
+    </div>
+
+</form>

@@ -1,0 +1,22 @@
+﻿@page
+@model VSSummit2020.Pages.Relatorios.IndexModel
+@{
+}
+
+
+
+
+<div class="text-center">
+    <div class="row">
+        <h1 class="display-4">Gostaria de ver um relatório? <small>é meio que só isso que fazemos, mesmo</small></h1>
+        <p>Não conseguimos entender qual dos inúmeros dois relatórios você gostaria de ver... selecione abaixo.</p>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col col-3">
+            <a class="btn btn-primary btn-lg btn-block" role="button" asp-page="/Relatorios/Entrada" asp-route-startDate="@Model.StartDate" asp-route-finalDate="@Model.FinalDate"><i class="fas fa-sign-in-alt"></i> Entradas</a>
+        </div>
+        <div class="col col-3">
+            <a class="btn btn-primary btn-lg btn-block" role="button" asp-page="/Relatorios/Saida" asp-route-startDate="@Model.StartDate" asp-route-finalDate="@Model.FinalDate"><i class="fas fa-sign-out-alt"></i> Saídas</a>
+        </div>
+    </div>
+</div>

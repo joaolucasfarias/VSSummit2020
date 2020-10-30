@@ -1,0 +1,46 @@
+﻿@page
+@model VSSummit2020.Pages.Nav.GestureModel
+@{
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div id="camera"></div>
+            <form method="post" enctype="multipart/form-data" id="pictureForm">
+                <input type="button" class="btn btn-success" value="Enviar comando de gesto" onClick="takeSnapshot()">
+                <input type="hidden" id="pictureBase64" name="pictureBase64" value="" />
+                <br />
+                <div id="results"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    window.onload = function () {
+        Webcam.set({
+            width: 320,
+            height: 240,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });
+
+        Webcam.attach('#camera');
+    }
+
+    function takeSnapshot() {
+
+        setTimeout(snapshot, 1000);
+    }
+
+    function snapshot() {
+
+        Webcam.snap(function (dataUri) {
+            document.getElementById('pictureBase64').value = dataUri;
+        });
+
+        document.getElementById('pictureForm').submit();
+    }
+</script>

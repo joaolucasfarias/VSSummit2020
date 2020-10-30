@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomVisionService\CustomVisionService.csproj" />
+    <ProjectReference Include="..\LUIS\LUIS.csproj" />
+    <ProjectReference Include="..\Speech\SpeechService.csproj" />
+    <ProjectReference Include="..\Translator\TranslatorService.csproj" />
+  </ItemGroup>
+
+</Project>
